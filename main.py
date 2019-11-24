@@ -10,10 +10,10 @@ import mappings
 # 7 columns (Lang, Set, Name, Version, QtyReg, QtyFoil, Notes).
 
 
-sourceName = 'samples/input.csv'
-targetName = 'output.csv'
+SOURCE_SAMPLE_NAME = 'samples/mtgManger.csv'
+TARGET_NAME = 'output.csv'
 
-sourceData = file.readCSV(sourceName)
+sourceData = file.readCSV(SOURCE_SAMPLE_NAME)
 result = []
 
 for row in sourceData:
@@ -28,7 +28,6 @@ for row in sourceData:
   
   entry = [language,code, name, version, qtyReg, qtyFoiled, '']
   result.append(entry)
-print(result)
 
-file.writeCSV(targetName, result)
+file.writeCSV(TARGET_NAME, result)
 

@@ -31,7 +31,6 @@ def storeLocalCardInfo(info):
   file.write(STORED_LOOk_UPS, newContent)
 
 def requestSetVariants(url, set, lang):
-  print('request from ', url)
   webURL = urllib.request.urlopen(url)
   data = webURL.read()
   encoding = webURL.info().get_content_charset('utf-8')
@@ -49,7 +48,7 @@ def byNameAndSet(name, set, lang):
 
   urlFriendlyName = name.replace(' ','+')
   url = API_ENDPOINT+SEARCH_BY_NAME_ROUTE+urlFriendlyName+'&set='+set
-  print('request from ', url)
+  print('request from card details from \n', url)
   webURL = urllib.request.urlopen(url)
   data = webURL.read()
   encoding = webURL.info().get_content_charset('utf-8')

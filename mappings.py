@@ -1,5 +1,4 @@
-import request;
-
+import request
 
 LANGUAGES = ['en', 'de', 'pt', 'it', 'es', 'ja', 'cn', 'ru', 'tw', 'ko', ]
 SET_CORRECTIONS = {
@@ -14,9 +13,8 @@ SET_CORRECTIONS = {
 def mapVersion(name, set, lang):
   cardInfo = request.byNameAndSet(name, set, lang)
   if cardInfo['reprint'] > 1:
-    print('got more ', cardInfo['reprint'])
     return str(cardInfo['reprint'])
-  return 'NADA'
+  return ''
 
 def removeLowerCase(name, set, lang):
   cardInfo = request.byNameAndSet(name, set, lang)
