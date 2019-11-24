@@ -1,0 +1,5 @@
+To import custom inventory you must create CSV file with the following parameters:
+1. UTF16 encoding with BOM signature.
+2. TAB separators.
+3. 7 columns (Lang, Set, Name, Version, QtyReg, QtyFoil, Notes).
+MS Excel or Access can create such like files.
